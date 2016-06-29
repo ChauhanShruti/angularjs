@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>angular js3</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+	   $scope.message="hello world"
+       $scope.print=function(){alert($scope.message);}
+    });
+</script>
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="myCtrl" ng-bind="print()">
+</div>
+</body>
+
+</html>

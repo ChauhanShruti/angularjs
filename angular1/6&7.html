@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>angular js6&7</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>  
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+
+	// for counting single clicks
+	$scope.count1=0; 
+	// for counting double clicks   
+	$scope.count2=0;
+
+ // the function sclick is counting the number of times the button is single clicked and showing it through an alert  box
+
+    $scope.sclick = function() {
+	    $scope.count1+=1;
+        alert("The first button has been single clicked "+$scope.count1+" times");
+    };
+
+  // the function dclick is counting the number of times the button is double clicked and showing it through an alert  box
+    $scope.dclick = function() {
+	    $scope.count2+=1;
+        alert("The second button has been double clicked "+$scope.count2+" times");
+    };
+});
+</script>
+</head>
+
+<body ng-app="myApp">
+<p>Click the button:</p>
+<div ng-controller="myCtrl">
+<button ng-click="sclick()" >single</button>
+<button ng-dblclick="dclick()">double</button>
+</div>
+</body>
+</html>
+

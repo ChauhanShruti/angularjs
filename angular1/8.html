@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>angular js8</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript">
+	
+    var myapp = angular.module('myapp', []);
+    myapp.controller('mycontroller', function($scope) {
+        $scope.Name= "Shruti";
+    });
+</script>
+</head>
+<body>
+
+<div ng-app="myapp" ng-controller="mycontroller">
+
+
+<p ng-bind="Name"></p>
+
+</div>
+
+</body>
+</html>
+

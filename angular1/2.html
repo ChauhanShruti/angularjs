@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>angular js2</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+	
+    var myapp = angular.module('myapp', []);
+    myapp.controller('mycontroller', function($scope) {
+        $scope.firstName= "Shruti";
+        $scope.lastName= "Chauhan";
+    });
+
+
+
+</script>
+
+<style type="text/css">
+	table,th,td{
+		border:1px solid ;
+	}
+</style>
+</head>
+<body>
+
+<div ng-app="myapp" ng-controller="mycontroller">
+
+
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+</body>
+</html>
